@@ -6,8 +6,6 @@ if (list && list.length) {
     allPerson = list.join(';')
 } else {
     let arr = new Array(385).fill(0).map((item, ind) => addZero(ind + 1))
-    let filearr = [320, 137, 135, 172, 383]
-    arr = arr.filter(v => filearr.indexOf(v) == -1)
     sessionStorage.setItem('list', JSON.stringify(arr))
     allPerson = arr.join(';')
 }
